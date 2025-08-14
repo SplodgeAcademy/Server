@@ -1,0 +1,17 @@
+<% content_for :title, "Editing word formation" %>
+
+<div class="container">
+    <%# Heading %>
+    <h1>Editing word formation</h1>
+
+    <%# Edit form %>
+    <%= render "form", word_formation: @word_formation %>
+    <br>
+
+    <div>
+        <%# Show word formation link %>
+        <%= link_to "Show this word formation", @word_formation %> |
+        <%# All word formations link %>
+        <%= link_to "Back to word formations", word_formations_path %>
+    </div>
+</div>

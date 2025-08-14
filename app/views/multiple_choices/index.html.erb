@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+    <%# Heading %>
+    <% content_for :title, "Multiple choices" %>
+    <h1>Multiple choices</h1>
+
+    <div id="multiple_choices">
+        <% @multiple_choices.each do |multiple_choice| %>
+            <%# Multiple choice %>
+            <%= render multiple_choice %>
+
+            <%# Show multiple choice link %>
+            <p>
+                <%= link_to "Show this multiple choice", multiple_choice %>
+            </p>
+        <% end %>
+    </div>
+
+    <%# New page link %>
+    <%= link_to "New multiple choice", new_multiple_choice_path %>
+</div>

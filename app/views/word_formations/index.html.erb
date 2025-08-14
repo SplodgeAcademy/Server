@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+    <%# Heading %>
+    <% content_for :title, "Word formations" %>
+
+    <h1>Word formations</h1>
+
+    <div id="word_formations">
+        <% @word_formations.each do |word_formation| %>
+            <%# Word formation %>
+            <%= render word_formation %>
+
+            <%# Show word formation link %>
+            <p>
+                <%= link_to "Show this word formation", word_formation %>
+            </p>
+        <% end %>
+    </div>
+
+    <%# New page link %>
+    <%= link_to "New word formation", new_word_formation_path %>
+</div>

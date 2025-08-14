@@ -1,0 +1,18 @@
+<% content_for :title, "Editing multiple choice" %>
+
+<div class="container">
+    <%# Heading %>
+    <h1>Editing multiple choice</h1>
+
+    <%# Edit form %>
+    <%= render "form", multiple_choice: @multiple_choice %>
+    <br>
+
+    <div>
+        <%# Show multiple choice link %>
+        <%= link_to "Show this multiple choice", @multiple_choice %> |
+
+        <%# All multiple choices link %>
+        <%= link_to "Back to multiple choices", multiple_choices_path %>
+    </div>
+</div>

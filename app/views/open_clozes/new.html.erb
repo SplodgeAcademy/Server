@@ -1,0 +1,14 @@
+<div class="container">
+    <%# Heading %>
+    <% content_for :title, "New open cloze" %>
+    <h1>New open cloze</h1>
+
+    <%# New open cloze form %>
+    <%= render "form", open_cloze: @open_cloze %>
+    <br>
+
+    <%# All open clozes link %>
+    <div>
+        <%= link_to "Back to open clozes", open_clozes_path %>
+    </div>
+</div>

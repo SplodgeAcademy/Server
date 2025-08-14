@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+    <%# Heading %>
+    <% content_for :title, "Open clozes" %>
+
+    <h1>Open clozes</h1>
+
+    <div id="open_clozes">
+        <% @open_clozes.each do |open_cloze| %>
+            <%# Open cloze %>
+            <%= render open_cloze %>
+
+            <%# Show open cloze link %>
+            <p>
+                <%= link_to "Show this open cloze", open_cloze %>
+            </p>
+        <% end %>
+    </div>
+
+    <%# New page link %>
+    <%= link_to "New open cloze", new_open_cloze_path %>
+</div>

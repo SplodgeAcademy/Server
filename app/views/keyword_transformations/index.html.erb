@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+    <%# Heading %>
+    <% content_for :title, "Keyword transformations" %>
+    <h1>Keyword transformations</h1>
+
+    <div id="keyword_transformations">
+        <% @keyword_transformations.each do |keyword_transformation| %>
+            <%# Keyword transformation %>
+            <%= render keyword_transformation %>
+
+            <%# Show keyword transformation link %>
+            <p>
+                <%= link_to "Show this keyword transformation", keyword_transformation %>
+            </p>
+        <% end %>
+    </div>
+
+    <%# New page link %>
+    <%= link_to "New keyword transformation", new_keyword_transformation_path %>
+</div>

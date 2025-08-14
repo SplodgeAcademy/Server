@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+    <%# Multiple Choice %>
+    <%= render @multiple_choice %>
+
+    <div>
+        <%# Edit page link %>
+        <%= link_to "Edit this multiple choice", edit_multiple_choice_path(@multiple_choice) %> |
+
+        <%# All multiple choices link %>
+        <%= link_to "Back to multiple choices", multiple_choices_path %>
+
+        <%# Destroy button %>
+        <%= button_to "Destroy this multiple choice", @multiple_choice, method: :delete %>
+    </div>
+</div>

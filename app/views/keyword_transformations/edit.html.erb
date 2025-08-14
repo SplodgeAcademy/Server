@@ -1,0 +1,17 @@
+<% content_for :title, "Editing keyword transformation" %>
+
+<div class="container">
+    <%# Heading %>
+    <h1>Editing keyword transformation</h1>
+
+    <%# Edit form %>
+    <%= render "form", keyword_transformation: @keyword_transformation %>
+    <br>
+
+    <div>
+        <%# Show keyword transformation link %>
+        <%= link_to "Show this keyword transformation", @keyword_transformation %> |
+        <%# All keyword transformations link %>
+        <%= link_to "Back to keyword transformations", keyword_transformations_path %>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+    <%# Word formation %>
+    <%= render @word_formation %>
+
+    <div>
+        <%# Edit page link %>
+        <%= link_to "Edit this word formation", edit_word_formation_path(@word_formation) %> |
+
+        <%# All word formations link %>
+        <%= link_to "Back to word formations", word_formations_path %>
+
+        <%# Destroy button %>
+        <%= button_to "Destroy this word formation", @word_formation, method: :delete %>
+    </div>
+</div>

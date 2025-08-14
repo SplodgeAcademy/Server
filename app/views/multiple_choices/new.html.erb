@@ -1,0 +1,14 @@
+<div class="container">
+    <%# Heading %>
+    <% content_for :title, "New multiple choice" %>
+    <h1>New multiple choice</h1>
+
+    <%# New multiple choice form %>
+    <%= render "form", multiple_choice: @multiple_choice %>
+    <br>
+
+    <%# All multiple choices link %>
+    <div>
+        <%= link_to "Back to multiple choices", multiple_choices_path %>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+    <%# Keyword transformation %>
+    <%= render @keyword_transformation %>
+
+    <div>
+        <%# Edit page link %>
+        <%= link_to "Edit this keyword transformation", edit_keyword_transformation_path(@keyword_transformation) %> |
+
+        <%# All keyword transformations link %>
+        <%= link_to "Back to keyword transformations", keyword_transformations_path %>
+
+        <%# Destroy button %>
+        <%= button_to "Destroy this keyword transformation", @keyword_transformation, method: :delete %>
+    </div>
+</div>
