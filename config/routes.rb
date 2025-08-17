@@ -1,14 +1,21 @@
 Rails.application.routes.draw do
-  resources :multiple_choices
-  resources :keyword_transformations
-  resources :word_formations
-  get "word_formation/question"
-  get "word_formation/answer"
-  get "word_formation/keyword"
-  resources :open_clozes
-    # Routes
+    # Info page
     get "info", to: "pages#info"
 
+    # Quiz routes
+    resources :multiple_choices
+    resources :open_clozes
+    resources :word_formations
+    resources :keyword_transformations
+
+    # User routes
+    devise_for :users, controllers: {
+        sessions: "users/sessions",
+        registrations: "users/registrations"
+    }
+
+    # Profile page
+    get "/u/:id", to: "users#profile", as: "user"
 
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

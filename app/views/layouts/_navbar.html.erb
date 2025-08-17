@@ -14,22 +14,30 @@
                 <li class="nav-item">
                     <%= link_to 'Info', info_path, class: "nav-link" %>
                 </li>
+
+                <%# Multiple choices link %>
+                <li class="nav-item">
+                    <%= link_to 'Open Clozes', multiple_choices_path, class: "nav-link" %>
+                </li>
+
+                <%# Open clozes link %>
+                <li class="nav-item">
+                    <%= link_to 'Multiple Choices', open_clozes_path, class: "nav-link" %>
+                </li>
+
+                <%# Word formations link %>
+                <li class="nav-item">
+                    <%= link_to 'Word Formations', word_formations_path, class: "nav-link" %>
+                </li>
+
+                <%# Keyword transformations link %>
+                <li class="nav-item">
+                    <%= link_to 'Keyword Transformations', keyword_transformations_path, class: "nav-link" %>
+                </li>
             </ul>
 
             <ul class="navbar-nav">
-                <%# Dropdown menu %>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
+                <%= render "user/session_manager" %>
             </ul>
         </div>
     </div>
