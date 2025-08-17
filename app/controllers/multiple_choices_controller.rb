@@ -1,5 +1,6 @@
 class MultipleChoicesController < ApplicationController
     before_action :set_multiple_choice, only: %i[ show edit update destroy ]
+    # before_action :authenticate_user!, except: %i[ show index ]
 
     # GET /multiple_choices or /multiple_choices.json
     def index

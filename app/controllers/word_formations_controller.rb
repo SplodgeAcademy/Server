@@ -1,5 +1,6 @@
 class WordFormationsController < ApplicationController
     before_action :set_word_formation, only: %i[ show edit update destroy ]
+    # before_action :authenticate_user!, except: %i[ show index ]
 
     # GET /word_formations or /word_formations.json
     def index

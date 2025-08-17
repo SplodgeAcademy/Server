@@ -2,6 +2,18 @@
     <%# Heading %>
     <h1>Splodge Academy Server</h1>
 
-    <%# Link to info page %>
-    <%= link_to 'Info', info_path %>
+    <%# Info page link %>
+    <%= link_to 'Info', info_path, class: "btn btn-secondary" %>
+
+    <%# Multiple choices link %>
+    <%= link_to 'Part 1', multiple_choices_path, class: "btn btn-primary" %>
+
+    <%# Open clozes link %>
+    <%= link_to 'Part 2', open_clozes_path, class: "btn btn-primary" %>
+
+    <%# Word formations link %>
+    <%= link_to 'Part 3', word_formations_path, class: "btn btn-primary" %>
+
+    <%# Keyword transformations link %>
+    <%= link_to 'Part 4', keyword_transformations_path, class: "btn btn-primary" %>
 </div>

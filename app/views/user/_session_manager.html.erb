@@ -1,0 +1,40 @@
+<% if current_user %>
+    <li class="nav-item dropdown">
+        <%# Dropdown menu toggle %>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= current_user.name %>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+            <%# Edit account link %>
+            <li><%= link_to "Edit Account", edit_user_registration_path, class: "dropdown-item" %></li>
+
+            <%# New multiple choice link %>
+            <li><%= link_to 'New Multiple Choice', new_multiple_choice_path, class: "dropdown-item" %></li>
+
+            <%# New open cloze link %>
+            <li><%= link_to 'New Open Cloze', new_open_cloze_path, class: "dropdown-item" %></li>
+
+            <%# New word formation link %>
+            <li><%= link_to 'New Word Formation', new_word_formation_path, class: "dropdown-item" %></li>
+
+            <%# New keyword transformation link %>
+            <li><%= link_to 'New Keyword Transformation', new_keyword_transformation_path, class: "dropdown-item" %></li>
+            
+            <%# Sign out button %>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+        </ul>
+    </li>
+
+<% else %>
+    <%# Sign up link %>
+    <li class="nav-item">
+        <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link" %>
+    </li>
+
+    <%# Log in link %>
+    <li class="nav-item">
+        <%= link_to 'Log In', new_user_session_path, class: "nav-link" %>
+    </li>
+<% end %>

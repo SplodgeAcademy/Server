@@ -1,5 +1,6 @@
 class OpenClozesController < ApplicationController
     before_action :set_open_cloze, only: %i[ show edit update destroy ]
+    # before_action :authenticate_user!, except: %i[ show index ]
 
     # GET /open_clozes or /open_clozes.json
     def index
