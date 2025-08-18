@@ -5,5 +5,16 @@ class PagesController < ApplicationController
     end
 
     def info
+        # Get doorkeeper application
+        @application = Doorkeeper::Application.where(name: "Webapp").first
+
+        # Set attributes to be displayed on info page
+        if @application
+            @application = {
+                name: @application.name,
+                client_id: @application.uid,
+                client_secret: @application.secret
+            }
+        end
     end
 end

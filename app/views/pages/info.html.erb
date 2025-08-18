@@ -2,6 +2,6 @@
     <%# Heading %>
     <h1>Server Info</h1>
 
-    <%# Link to home page %>
-    <%= link_to 'Home', root_path %>
+    <%# Doorkeeper application info %>
+    <%= @application.as_json %>
 </div>

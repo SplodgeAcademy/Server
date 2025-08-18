@@ -64,3 +64,9 @@ end
 
 # Adds user functionality
 gem "devise"
+
+# Adds api functionallity
+gem "doorkeeper", "~> 5.8"
+
+# Enables controlled access to api
+gem "rack-cors", "~> 3.0"
