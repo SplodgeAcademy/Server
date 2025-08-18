@@ -17,6 +17,12 @@ Rails.application.routes.draw do
     # Profile page
     get "/u/:id", to: "users#profile", as: "user"
 
+    # Doorkeeper for api requests
+    use_doorkeeper
+
+    # Adding api routes
+    draw :api
+
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
     # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

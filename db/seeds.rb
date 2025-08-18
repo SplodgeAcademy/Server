@@ -146,3 +146,8 @@ KeywordTransformation.create(
     keyword: "Call",
     prompt: "I'd rather ______________ the meeting."
 )
+
+# Create doorkeeper application
+if Doorkeeper::Application.count.zero?
+    Doorkeeper::Application.create!(name: "Webapp", redirect_uri: "", scopes: "")
+end
